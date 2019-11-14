@@ -11,5 +11,10 @@
 
 2、添加定时任务执行nmap进行扫描
     
-    #  0 1 * * 6 /opt/nmap-elk-sh/nmap-scan.sh
+    #  mkdir -p /opt/nmap-elk-sh/
+    #  mkdir -p /opt/nmap-xml
+    #  cd /opt/nmap-elk-sh  && git clone https://github.com/netsecli/asset.git
+    
+    #  echo "0 1 * * 6 /opt/nmap-elk-sh/nmap-scan.sh" >> ~/conf && crontab ~/conf && rm -f ~/conf
+    #  echo "0 1 * * 7 /opt/nmap-elk-sh/ingest.sh" >> ~/conf && crontab ~/conf && rm -f ~/conf
  
