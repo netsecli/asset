@@ -18,3 +18,4 @@
     #  echo "0 1 * * 6 /opt/nmap-elk-sh/nmap-scan.sh" >> ~/conf && crontab ~/conf && rm -f ~/conf
     #  echo "0 1 * * 7 /opt/nmap-elk-sh/ingest.sh" >> ~/conf && crontab ~/conf && rm -f ~/conf
  
+3、导入配置文件，打开kibana：管理---已保存对象---导入，选择dashboard.ndjson导入即可
