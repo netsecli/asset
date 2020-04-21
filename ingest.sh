@@ -10,11 +10,13 @@ if [ -d /opt/nmap-xml ];then
 else
     mkdir -p /opt/nmap-xml
 fi
+
 if [ $Nmap_status -ne 0 ];then
         continte
 else
         rpm -vhU https://nmap.org/dist/nmap-7.80-1.x86_64.rpm &> /dev/null
-    fi
+fi
+
 /usr/bin/nmap -sV -p1-65535 -oX /opt/nmap-xml/nmap-${Date}.xml 192.168.1.0/24
 if [ $? -eq 0 ];then
     curl -XDELETE "localhost:9200/nmap*"
